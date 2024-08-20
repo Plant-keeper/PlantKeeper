@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'https://sainane.github.io/PDG_2024/landingPage/index.html'
+          path: 'https://github.com/Sainane/PDG_2024/blob/main/landingPage/index.html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
