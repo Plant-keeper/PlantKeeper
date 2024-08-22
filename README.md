@@ -1,5 +1,11 @@
 # README
 
+![logo](figures/logo.png)
+
+## Contributors
+
+Rafael Dousse, Eva Ray, Quentin Surdez, Rachel Tranchida
+
 ## About PROJECT
 
 PROJECT is an innovative solution designed to help you effortlessly manage the well-being of your
@@ -26,6 +32,54 @@ receive the optimal care they need.
   directly
   within the web app. This feature provides valuable insights and tips tailored to different plant types, helping you
   make informed decisions about plant care and maintenance.
+
+### Functional Requirements
+
+- **Sensor Integration**:
+  The system must allow users to connect and configure sensors for monitoring humidity levels, UV light exposure, and
+  room temperature of individual plants.
+  The system must continuously receive and store real-time data from sensors, including humidity, temperature, and UV
+  light exposure, linked to specific plants.
+- **User Authentication**:
+  Users must be able to create a profile with unique login credentials (username and password) to securely access the
+  web application.
+  The system must allow users to log in and out of their profiles securely using authentication mechanisms such as JWT
+  tokens.
+- **Plant Management**:
+  Users must be able to add new plants, select their type from a predefined list, and link them to specific sensors for
+  personalized monitoring.
+  The system must provide a dashboard displaying real-time metrics (humidity, solar exposure, temperature) for each
+  plant.
+- **Health Monitoring and Notifications**:
+  The system must visually indicate if any metric (humidity, temperature, UV exposure) falls outside the optimal range
+  by changing the related symbol to red.
+  A health indicator in the form of a smiley face must dynamically change its expression based on the overall health
+  status of each plant.
+  The system must send automated email notifications to users when a plant requires watering or has received enough
+  sunlight for the day.
+- **Plant Information Database**:
+  The system must provide access to a database containing general care information for various plant types.
+  Users must be able to search and view plant care tips and guidelines within the web application.
+
+### Non-Functional Requirements
+
+- **Performance**:
+  The system must be able to process and display sensor data in real-time with minimal latency.
+  The web application must load the plant dashboard and respond to user interactions within 3 seconds.
+- **Security**:
+  User authentication must be secure, ensuring that unauthorized users cannot access personal profiles or sensitive
+  data.
+- **Usability**:
+  The web application must have an intuitive user interface that allows users of all technical levels to easily
+  navigate, add plants, and access sensor data.
+  Visual indicators (like the smiley face health indicator) must be clear and easy to understand at a glance.
+- **Reliability**:
+  The system must be highly reliable, ensuring continuous monitoring and timely notifications.
+  Email notifications must be sent accurately and within 10 minutes when plant conditions require attention.
+- **Maintainability**:
+  The system must be developed in a modular way, allowing for easy updates and maintenance, including the addition of
+  new features or sensors.
+  Code and documentation must be kept up-to-date to facilitate ongoing development and bug fixing.
 
 PROJECT is the perfect companion for plant enthusiasts, offering a seamless and intelligent way to
 ensure your plants thrive.
