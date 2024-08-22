@@ -74,4 +74,66 @@ This architecture ensures a robust, scalable, and user-friendly solution for mon
 
 ![architecture](figures/architecture.jpg)
 
-## Workflow
+## Team Workflow
+
+The development of PROJECT is organized over a tight 3-week schedule, with a structured approach to task management and
+version control to ensure efficiency and collaboration. This workflow follows an Agile development methodology, allowing
+the team to adapt and iterate quickly as the project progresses.
+
+### Weekly and Daily Task Planning
+
+At the beginning of each week, the team collectively decides on the tasks that need to be accomplished within that week.
+This weekly planning sets the roadmap for our progress. Each day, during a brief stand-up meeting, the team reviews the
+weekly tasks and selects the specific tasks to be tackled on that day. This iterative planning process is a key aspect
+of Agile, providing flexibility to adjust priorities and focus on the most critical tasks.
+
+### Task Tracking with Kanban
+
+To keep track of the progress, we use a Kanban board integrated into our GitHub project. The Kanban board is divided
+into four columns:
+
+- **Backlog**: This column contains all the tasks that need to be completed but are not yet scheduled for the current
+  week.
+- **Tasks Current Week**: Tasks that have been prioritized for the current week are moved here from the backlog.
+- **In Progress**: Once a team member starts working on a task, it is moved to this column to indicate active
+  development.
+- **Done**: After a task has been fully completed, it is moved to this column, signaling that it is ready for review or
+  has
+  already been integrated into the project.
+
+This workflow allows us to visualize the status of each task and manage our time effectively, which is consistent with
+Agile practices focused on transparency and continuous delivery.
+
+### Git Workflow
+
+Our version control process is designed to maintain code quality and ensure smooth integration:
+
+1. **Creating Issues**: For every task, we create a corresponding issue in our GitHub repository. This issue tracks the
+   progress and discussions related to that task.
+2. **Branching and Development**: A new branch is created for each issue. The branch name typically references the issue
+   number to maintain clarity. Development work is carried out in this branch, with all necessary commits made during
+   the process.
+3. **Pull Requests** (PRs): Once the feature or fix is ready, the branch is pushed to GitHub, automatically creating a
+   Pull
+   Request (PR). This PR is then reviewed by at least two other collaborators. This peer review process helps catch
+   potential issues early and ensures that code quality standards are met.
+4. **Approval and Merging**: The PR cannot be merged into the main branch until it has received approval from two
+   collaborators. Additionally, the deployment process must succeed to ensure that the new code doesn’t break the
+   application. Once these conditions are met, the branch is merged into the main branch, and the feature or fix becomes
+   part of the project.
+
+### Scrum methodology
+
+Our development process is inspired by the Scrum methodology. We organize our work into weekly sprints, where we plan
+and prioritize tasks at the beginning of each week, similar to Scrum's Sprint Planning. (Typically, the sprint is two
+weeks long, but for this project, we have condensed it into one week to accommodate the
+tight schedule.) The rest of our organization also aligns with Scrum practices.
+Daily stand-up meetings help us align on the day’s
+objectives, ensuring everyone is on the same page and any obstacles are quickly addressed. We track our progress using a
+Kanban board, which allows us to visualize the flow of work and maintain transparency throughout the sprint. Each task
+is developed in dedicated branches with peer-reviewed pull requests, ensuring high-quality, incremental delivery. By
+adhering to Scrum, we are able to adapt quickly to changes and continuously improve our workflow, ultimately delivering
+a more robust and effective project.
+
+This workflow promotes collaboration, code quality, and stability throughout the development process, aligning with
+Agile principles.
