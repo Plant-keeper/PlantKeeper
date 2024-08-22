@@ -1,6 +1,9 @@
 .u-section-1 .u-sheet-1 {
   min-height: 866px;
 }
+.image-main {
+  border-radius: 120px 20px 120px 20px;
+}
 
 .u-section-1 .u-layout-wrap-1 {
   width: 1190px;
@@ -169,6 +172,57 @@
   .u-section-1 .u-layout-cell-2 {
     min-height: 574px;
   }
+}
+/* The navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #AFE1AF;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 100000;
+}
+.logo {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  width: 26px;
+  height: 46px;
+
+}
+#logo-pos {
+  justify-content: right;
+}
+#carousel {
+  padding-left: 100px;
+}
+#carousel_ab83 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #205712;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
 
 @media (max-width: 575px) {
