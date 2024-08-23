@@ -2,6 +2,15 @@
   min-height: 866px;
 }
 
+.u-layout{
+  margin-right: 20px;
+}
+
+.image-main {
+  border-radius: 120px 20px 120px 20px;
+  margin-right: 50px;
+}
+
 .u-section-1 .u-layout-wrap-1 {
   width: 1190px;
   margin: 60px -25px;
@@ -169,6 +178,76 @@
   .u-section-1 .u-layout-cell-2 {
     min-height: 574px;
   }
+}
+/* The navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #A3C9A8;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 100000;
+}
+.logo {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  width: 26px;
+  height: 46px;
+
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo-pos {
+  justify-content: right;
+}
+#carousel {
+  padding-left: 100px;
+}
+#carousel_ab83 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #205712;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'jsmath-cmti10', sans-serif;
+  margin-right: 15px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
 
 @media (max-width: 575px) {
@@ -543,7 +622,7 @@
 .u-section-6 .u-image-1 {
   height: 209px;
   width: 209px;
-  background-image: url("images/fggggg.jpg");
+  background-image: url("images/quentin.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -578,7 +657,7 @@
 .u-section-6 .u-image-2 {
   height: 209px;
   width: 209px;
-  background-image: url("images/yyyy.jpg");
+  background-image: url("images/eva.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -613,7 +692,7 @@
 .u-section-6 .u-image-3 {
   height: 209px;
   width: 209px;
-  background-image: url("images/f5f4b03a-6b27-3595-ba4e-7b894cc961a3.jpg");
+  background-image: url("images/rafael.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -654,7 +733,7 @@
 .u-section-6 .u-image-4 {
   height: 209px;
   width: 209px;
-  background-image: url("images/444.jpg");
+  background-image: url("images/rachel.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
