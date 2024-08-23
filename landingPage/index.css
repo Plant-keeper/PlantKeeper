@@ -1,8 +1,14 @@
 .u-section-1 .u-sheet-1 {
   min-height: 866px;
 }
+
+.u-layout{
+  margin-right: 20px;
+}
+
 .image-main {
   border-radius: 120px 20px 120px 20px;
+  margin-right: 50px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
@@ -179,7 +185,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  background-color: #AFE1AF;
+  background-color: #A3C9A8;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -188,11 +194,17 @@
 .logo {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-right: 15px;
+  margin-right: 10px;
   width: 26px;
   height: 46px;
 
 }
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+
 #logo-pos {
   justify-content: right;
 }
@@ -212,6 +224,19 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'jsmath-cmti10', sans-serif;
+  margin-right: 15px;
 }
 
 /* Change background on mouse-over */
@@ -597,7 +622,7 @@
 .u-section-6 .u-image-1 {
   height: 209px;
   width: 209px;
-  background-image: url("images/fggggg.jpg");
+  background-image: url("images/quentin.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -632,7 +657,7 @@
 .u-section-6 .u-image-2 {
   height: 209px;
   width: 209px;
-  background-image: url("images/yyyy.jpg");
+  background-image: url("images/eva.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -667,7 +692,7 @@
 .u-section-6 .u-image-3 {
   height: 209px;
   width: 209px;
-  background-image: url("images/f5f4b03a-6b27-3595-ba4e-7b894cc961a3.jpg");
+  background-image: url("images/rafael.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -708,7 +733,7 @@
 .u-section-6 .u-image-4 {
   height: 209px;
   width: 209px;
-  background-image: url("images/444.jpg");
+  background-image: url("images/rachel.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
