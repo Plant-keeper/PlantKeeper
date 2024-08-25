@@ -6,9 +6,9 @@
 
 Rafael Dousse, Eva Ray, Quentin Surdez, Rachel Tranchida
 
-## About PROJECT
+## About PlantKeeper
 
-PROJECT is an innovative solution designed to help you effortlessly manage the well-being of your
+PlantKeeper is an innovative solution designed to help you effortlessly manage the well-being of your
 home plants. The system combines hardware and software to monitor environmental conditions and ensure your plants
 receive the optimal care they need.
 
@@ -17,7 +17,7 @@ receive the optimal care they need.
 - **Sensor Integration**: Place a sensor in the pot of your plant to continuously monitor humidity levels, UV light
   exposure, and room temperature. These real-time metrics will be used to help you maintain a healthy plant
   environment.
-- **User-Friendly Web App**: Access the PROJECT system via an intuitive web application. You can create your profile and
+- **User-Friendly Web App**: Access the PlantKeeper system via an intuitive web application. You can create your profile and
   after logging in, you can add new sensors to use and plants to monitor. You can choose the type of your plant from a
   selection and link it to its specific sensor, allowing for personalized monitoring.
 - **Plant Monitoring Dashboard**: View detailed information about each of your plants, including current humidity, solar
@@ -81,14 +81,14 @@ receive the optimal care they need.
   new features or sensors.
   Code and documentation must be kept up-to-date to facilitate ongoing development and bug fixing.
 
-PROJECT is the perfect companion for plant enthusiasts, offering a seamless and intelligent way to
+PlantKeeper is the perfect companion for plant enthusiasts, offering a seamless and intelligent way to
 ensure your plants thrive.
 
 ## Architecture and technical choices
 
 ### Web App
 
-The web architecture of the PROJECT follows a classic frontend/backend model. Here's how the system is
+The web architecture of PlantKeeper follows a classic frontend/backend model. Here's how the system is
 structured:
 
 - **Backend**: The backend is responsible for receiving data from the Raspberry Pi sensors and storing this information
@@ -126,11 +126,11 @@ This architecture ensures a robust, scalable, and user-friendly solution for mon
 
 ### Diagram
 
-![architecture](figures/architecture.jpg)
+![architecture](figures/architecture.png)
 
 ## Team Workflow
 
-The development of PROJECT is organized over a tight 3-week schedule, with a structured approach to task management and
+The development of PlantKeeper is organized over a tight 3-week schedule, with a structured approach to task management and
 version control to ensure efficiency and collaboration. This workflow follows an Agile development methodology, allowing
 the team to adapt and iterate quickly as the project progresses.
 
