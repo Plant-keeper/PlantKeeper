@@ -17,7 +17,8 @@ receive the optimal care they need.
 - **Sensor Integration**: Place a sensor in the pot of your plant to continuously monitor humidity levels, UV light
   exposure, and room temperature. These real-time metrics will be used to help you maintain a healthy plant
   environment.
-- **User-Friendly Web App**: Access the PlantKeeper system via an intuitive web application. You can create your profile and
+- **User-Friendly Web App**: Access the PlantKeeper system via an intuitive web application. You can create your profile
+  and
   after logging in, you can add new sensors to use and plants to monitor. You can choose the type of your plant from a
   selection and link it to its specific sensor, allowing for personalized monitoring.
 - **Plant Monitoring Dashboard**: View detailed information about each of your plants, including current humidity, solar
@@ -112,15 +113,16 @@ cloud.) The database itself is structured using SQL for efficient data managemen
 
 ### Embedded System
 
-The embedded system, powered by a Raspberry Pi, is responsible for collecting data from various sensors (humidity,
+The embedded system, powered by an Arduino, is responsible for collecting data from various sensors (humidity,
 temperature, and UV light) and sending this information in JSON format to the backend.
 
 - **Data Transmission**: The sensor data is sent in a JSON structure, where each reading (humidity, temperature,
   luminosity)
   is associated with a unique sensor ID. An additional security measure involves a basic POST request to verify the
   sensor's authenticity using its ID. The system might also include a response protocol, if time permits.
-- **Hardware**: While a smaller Arduino could be considered for this role due to its lower power consumption, the
-  Raspberry Pi is chosen for its greater processing power, which ensures reliable and efficient data handling.
+- **Hardware**: The Arduino was chosen for its low power consumption and sufficient processing capabilities to handle
+  the data collection tasks efficiently. While a Raspberry Pi was initially considered, issues with Python libraries for
+  sensor integration led to the decision to use Arduino, ensuring reliable and efficient data handling.
 
 This architecture ensures a robust, scalable, and user-friendly solution for monitoring and managing plant health.
 
@@ -130,7 +132,8 @@ This architecture ensures a robust, scalable, and user-friendly solution for mon
 
 ## Team Workflow
 
-The development of PlantKeeper is organized over a tight 3-week schedule, with a structured approach to task management and
+The development of PlantKeeper is organized over a tight 3-week schedule, with a structured approach to task management
+and
 version control to ensure efficiency and collaboration. This workflow follows an Agile development methodology, allowing
 the team to adapt and iterate quickly as the project progresses.
 
