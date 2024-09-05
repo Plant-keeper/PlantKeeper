@@ -153,7 +153,8 @@ of Agile, providing flexibility to adjust priorities and focus on the most criti
 
 ### Task Tracking with Kanban
 
-To keep track of the progress, we use a Kanban board integrated into our GitHub project. The Kanban board is divided
+To keep track of the progress, we use a [Kanban](https://github.com/orgs/Plant-keeper/projects/2) board integrated into
+our GitHub project. The Kanban board is divided
 into four columns:
 
 - **Backlog**: This column contains all the tasks that need to be completed but are not yet scheduled for the current
