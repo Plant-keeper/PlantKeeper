@@ -7,16 +7,11 @@ and improvements to documentation.
 
 1. Choose the repository you want to contribute to (backend, frontend, embedded) and fork it.
 2. Clone the forked repository to your local machine.
-
-```bash
-git clone <link-to-your-forked-repo>
-```
-
 3. Create a new branch for your changes. The branch name should follow the naming convention. The naming convention is
    as follows:
-    - For a bug fix: `bugfix/<short-description>`
-    - For a new feature: `feature/<short-description>`
-    - For documentation: `doc/<short-description>`
+    - For a bug fix: `bugfix-<short-description>`
+    - For a new feature: `feature-<short-description>`
+    - For documentation: `doc-<short-description>`
 
 ```bash
 git branch <branch-name>
@@ -42,6 +37,9 @@ git switch <branch-name>
    and push the changes to your forked repository. Once the maintainers approve your pull request, it will be merged
    into the original repository.
 Once your pull request is merged, your contribution is complete! Congratulations and Thank you!
+
+>[!WARNING]
+>Please note that the test deployment on Vercel is restricted to project administrators. If you are not part of the admin team, access will not be granted. It's completely normal if the deployment fails for you.
 
 ## General rules
 - Make sure your code is well-documented.
