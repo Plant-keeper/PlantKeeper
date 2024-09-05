@@ -2,14 +2,16 @@
 
 ![logo](figures/logo.png)
 
-## Contributors
+## Original Contributors
 
 Rafael Dousse, Eva Ray, Quentin Surdez, Rachel Tranchida
 
 ## About PlantKeeper
 
-PlantKeeper is an innovative solution designed to help you effortlessly manage the well-being of your
-home plants. The system combines hardware and software to monitor environmental conditions and ensure your plants
+Keeping your plants healthy and thriving can be a challenge, especially when you're juggling a busy schedule. That's
+where
+PlantKeeper comes in.PlantKeeper is an innovative solution designed to help you effortlessly manage the well-being of
+your home plants. The system combines hardware and software to monitor environmental conditions and ensure your plants
 receive the optimal care they need.
 
 ### Key Features
@@ -92,7 +94,7 @@ ensure your plants thrive.
 The web architecture of PlantKeeper follows a classic frontend/backend model. Here's how the system is
 structured:
 
-- **Backend**: The backend is responsible for receiving data from the Raspberry Pi sensors and storing this information
+- **Backend**: The backend is responsible for receiving data from the sensors and storing this information
   in a central database. It also handles requests from the frontend, processing and sending the necessary data for
   display.
   The backend is built using Node.js, with NestJS as the framework, and integrates JWT tokens for secure user
@@ -105,21 +107,26 @@ structured:
 ### Database
 
 The database architecture is designed to keep the backend and database separate, which enhances security and
-scalability. The database is self-hosted in a private server. (If time runs short, we will deploy our database in the
-cloud.) The database itself is structured using SQL for efficient data management and retrieval.
+scalability. The database is self-hosted in a private server at our HQ. The database itself is structured using SQL for
+efficient data management and retrieval.
 
-- **Photo Storage**: For storing images associated with plants, Google Cloud Storage is used. This allows for robust and
-  scalable image storage separate from the main database.
+### Proxy Server
+
+The proxy server acts as an intermediary between the Arduino (which collects sensor data) and the backend API. The
+Arduino can only make HTTP requests, while the backend API only accepts HTTPS requests for security reasons. To bridge
+this gap, the proxy server receives the sensor data over HTTP, processes it, and then forwards it to the backend API
+over HTTPS. The server is built using Flask, a lightweight Python web framework that is easy to set up and maintain.
+This architecture ensures that the system follows security best practices without compromising the
+Arduino's functionality.
 
 ### Embedded System
 
 The embedded system, powered by an Arduino, is responsible for collecting data from various sensors (humidity,
-temperature, and UV light) and sending this information in JSON format to the backend.
+temperature, and light (UV and lumen)) and sending this information in JSON format to the backend.
 
 - **Data Transmission**: The sensor data is sent in a JSON structure, where each reading (humidity, temperature,
-  luminosity)
-  is associated with a unique sensor ID. An additional security measure involves a basic POST request to verify the
-  sensor's authenticity using its ID. The system might also include a response protocol, if time permits.
+  luminosity) is associated with a unique sensor ID. The Arduino sends this data to the proxy server via an HTTP POST
+  request every 5 minutes.
 - **Hardware**: The Arduino was chosen for its low power consumption and sufficient processing capabilities to handle
   the data collection tasks efficiently. While a Raspberry Pi was initially considered, issues with Python libraries for
   sensor integration led to the decision to use Arduino, ensuring reliable and efficient data handling.
@@ -194,3 +201,42 @@ a more robust and effective project.
 
 This workflow promotes collaboration, code quality, and stability throughout the development process, aligning with
 Agile principles.
+
+## Pipeline CI/CD
+
+![pipeline](figures/pipeline.png)
+
+Both our frontend and backend pipelines are set up to ensure efficient, reliable and automated deployment.
+Our CI/CD pipeline is structured to automate the testing, building, and deployment of our project through GitHub Actions
+whenever code changes are pushed or merged. The pipeline ensures that the code is thoroughly checked and deployed in two
+stages: when changes are pushed to the development branch and when pull requests are merged into the main branch.
+
+- __On Pull Request__:
+  When a pull request is created, the pipeline automatically starts.
+  Steps include:
+    - __Check Formatting__: This step ensures that the code follows the project's coding standards and formatting
+      guidelines.
+    - __Build__: The application is built to check for any build-related issues.
+    - __Unit Tests__: Unit tests are run to verify the correctness of individual components of the application.
+    - __Preview Deployment__: If the tests pass, a preview deployment is triggered to allow for testing in a live-like
+      environment.
+
+- __On Push to Dev Branch__:
+  Any push to the development branch triggers the same steps as above to maintain the quality of the codebase.
+
+- __On Merge to Main__:
+  Once code is merged into the main branch, the pipeline performs a similar set of steps (build, format check, unit
+  tests, and preview deployment), ensuring that the main branch is always in a deployable state. The project is then
+  automatically deployed to the production environment in __Vercel__.
+
+## Resources
+
+### Landing Page
+
+You can consult the landing page at the following
+link: [PlantKeeper Landing Page](https://plant-keeper.github.io/PlantKeeper/)
+
+### Mockup
+
+You can consult the mockup at the following
+link: [PlantKeeper Mockup](https://www.figma.com/design/mhe6pOap3EbmwhClDxlG4x/myPlants.ch?node-id=22-156&t=rSMCgeRBRCjYabqL-0)
