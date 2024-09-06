@@ -887,3 +887,32 @@
     width: 264px;
   }
 }
+
+.getStarted {
+
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+
+}
+
+.button_started {
+  background-color: #205712;
+  justify-self: center;
+  padding: 15px 32px;
+  border-radius: 5px;
+  border-color: #205712;
+  border-style: solid;
+}
+
+.link_button {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.button_started:hover {
+  background-color: #A3C9A8;
+  border-color: #A3C9A8;
+  color: white;
+}
