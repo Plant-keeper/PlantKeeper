@@ -212,7 +212,7 @@ Our CI/CD pipeline is structured to automate the testing, building, and deployme
 whenever code changes are pushed or merged. The pipeline ensures that the code is thoroughly checked and deployed in two
 stages: when changes are pushed to the development branch and when pull requests are merged into the main branch.
 
-- __On Pull Request__:
+- __On Pull Request on main__:
   When a pull request is created, the pipeline automatically starts.
   Steps include:
     - __Check Formatting__: This step ensures that the code follows the project's coding standards and formatting
